@@ -1,0 +1,95 @@
+</div>
+<div id="wrapper">
+    <ul id="scene">
+        <li class="layer" data-depth="0.10">
+            <img src="//static.sethtippetts.com/img/cloud-w-shadow.png" class="cloud size4" id="cloud1">
+            <img src="//static.sethtippetts.com/img/cloud-w-shadow.png" class="cloud size4" id="cloud2">
+            <img src="//static.sethtippetts.com/img/cloud-w-shadow.png" class="cloud size4" id="cloud3">
+            <img src="//static.sethtippetts.com/img/cloud-w-shadow.png" class="cloud size4" id="cloud4">
+            <img src="//static.sethtippetts.com/img/mountain.svg" class="size4" id="mountain17">
+        </li>
+        <li class="layer element" data-depth="0.3" style="z-index: 2;">
+            <img src="//static.sethtippetts.com/img/big-seth2.png" id="bigSeth">
+        </li>
+        <li class="layer" data-depth="0.25">
+            <img src="//static.sethtippetts.com/img/cloud-w-shadow.png" class="cloud size3" id="cloud5">
+            <img src="//static.sethtippetts.com/img/cloud-w-shadow.png" class="cloud size3" id="cloud6">
+            <img src="//static.sethtippetts.com/img/cloud-w-shadow.png" class="cloud size3" id="cloud7">
+            <img src="//static.sethtippetts.com/img/cloud-w-shadow.png" class="cloud size3" id="cloud8">
+            <img src="//static.sethtippetts.com/img/cloud-w-shadow.png" class="cloud size3" id="cloud9">
+            <img src="//static.sethtippetts.com/img/cloud-w-shadow.png" class="cloud size3" id="cloud10">
+        </li>
+        <li class="layer" data-depth="0.40">
+            <img src="//static.sethtippetts.com/img/cloud-w-shadow.png" class="cloud size2" id="cloud11">
+            <img src="//static.sethtippetts.com/img/cloud-w-shadow.png" class="cloud size2" id="cloud12">
+            <img src="//static.sethtippetts.com/img/cloud-w-shadow.png" class="cloud size2" id="cloud13">
+            <img src="//static.sethtippetts.com/img/cloud-w-shadow.png" class="cloud size2" id="cloud14">
+            <img src="//static.sethtippetts.com/img/cloud-w-shadow.png" class="cloud size2" id="cloud15">
+            <img src="//static.sethtippetts.com/img/mountain.svg" class="size4" id="mountain16">
+            <img src="//static.sethtippetts.com/img/mountain.svg" class="size3" id="mountain18">
+            <img src="//static.sethtippetts.com/img/mountain.svg" class="size4" id="mountain19">
+        </li>
+
+        <li class="layer" data-depth="1">
+            <img src="//static.sethtippetts.com/img/mountain.svg" style="bottom:-10%; left: -10%;">
+        </li>
+    </ul>
+</div>
+<script src="//static.sethtippetts.com/js/critical.js" id="critical-js"></script>
+<script src="//static.sethtippetts.com/js/parallax.js"></script>
+<script>
+    $(function(){
+
+        var ratio = 427/344;
+        var winHeight = $(window).height();
+        var winWidth = $(window).width();
+        createLayer(50,0.5);
+//                createLayer(25,0.50);
+//                createLayer(25,1.00);
+        function createLayer(count,depth){
+            var cloudHeight = winHeight/6;
+            var cloudWidth = winWidth+200;
+            var $layer = $('<li class="layer" data-depth="'+depth+'" style="z-index: 4;"></li>');
+            var width,height,top,left,opts,$image,offset = winWidth/1.5;
+            for(var i = 20;i<count;++i){
+                width = Math.floor(Math.max(100,Math.random()*427));
+                height = Math.floor(Math.max(100,Math.random()*344))
+                top = Math.max(-100,(Math.random()*cloudHeight)-(cloudHeight/1.5));
+                left = Math.max(-100,(Math.random()*cloudWidth)-(cloudWidth/1.5));
+                if(top>left){
+                    top -= left/1.2;
+                }
+                else {
+                    left -= top/1.2;
+                }
+                opts = {
+                    width:width,
+                    height:height,
+                    bottom:Math.floor((Math.random()*cloudHeight)-100)+'px',
+                    left:Math.floor((Math.random()*cloudWidth)-100)+'px'
+                }
+//                        opts[count%2===0?'left':'right'] = left+'px';
+                $image = $('<img src="//static.sethtippetts.com/img/mountain.svg" class="size4" id="mountain'+i+'">')//.css(opts);
+
+//                        $layer.append($image);
+            }
+            $('#scene').append($layer);
+
+        }
+        $('.cloud').each(function(i,val){
+
+            console.log('set timeout',Math.floor(i*Math.random()*1000));
+            var $this = $(this);
+            setTimeout(function(){
+                console.log('timeout');
+                $this.addClass('hover'+((i%3)+1));
+            },Math.floor(i*Math.random()*500))
+        });
+        $('#scene').height(winHeight);
+
+        $(window).resize(function(){
+            $('#scene').height(winHeight);
+        });
+        $('#scene').parallax();
+    });
+</script>

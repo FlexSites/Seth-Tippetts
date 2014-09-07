@@ -1,0 +1,270 @@
+body {
+    width: 100%;
+    background: rgb(13,134,179); /* Old browsers */
+    /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzBkODZiMyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwOTUzNzYiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+    background: -moz-linear-gradient(top,  rgba(13,134,179,1) 0%, rgba(9,83,118,1) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(13,134,179,1)), color-stop(100%,rgba(9,83,118,1))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  rgba(13,134,179,1) 0%,rgba(9,83,118,1) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  rgba(13,134,179,1) 0%,rgba(9,83,118,1) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  rgba(13,134,179,1) 0%,rgba(9,83,118,1) 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  rgba(13,134,179,1) 0%,rgba(9,83,118,1) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0d86b3', endColorstr='#095376',GradientType=0 ); /* IE6-8 */
+    overflow: auto !important;
+}
+#logo {
+    width: 800px;
+    margin: auto;
+    display: block;
+}
+#logo > img{
+    
+}
+#scene {
+    min-height: 360px;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    margin: 0;
+    padding: 0;
+}
+#bigSeth {
+    width: 500px;
+    position: absolute;
+    top: 70px;
+    right: -80px;
+}
+#bodyContent {
+    width: 70%;
+    text-align: right;
+}
+.layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    list-style-type: none;
+    z-index: 0;
+}
+.layer > img {
+    position: absolute;
+}
+.cloud {
+    display: inline-block;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-transform: translateY(-10px);
+    transform: translateY(-10px);
+}
+.hover1, .hover2, .hover3,#logo {
+    -webkit-transition-timing-function: ease-in-out; /* Safari and Chrome */
+    transition-timing-function: ease-in-out;
+    -webkit-transition-duration: 1s;
+    transition-duration: 1s;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-animation-name: hover;
+    animation-name: hover;
+    -webkit-animation-duration: 1.5s;
+    animation-duration: 1.5s;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+    animation-direction: alternate;
+}
+.hover1,#logo {
+    -webkit-animation-delay: 0.3s;
+    animation-delay: 0.3s;
+}
+.hover2 {
+    -webkit-animation-delay: 1s;
+    animation-delay: 1s;
+}
+.hover3 {
+    -webkit-animation-delay: 0.7s;
+    animation-delay: 0.7s;
+}
+/* Hover Shadow */
+@-webkit-keyframes hover {
+    50% {
+        -webkit-transform: translateY(-5px);
+        transform: translateY(-5px);
+    }
+
+    100% {
+        -webkit-transform: translateY(-10px);
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes hover {
+    50% {
+        -webkit-transform: translateY(-5px);
+        transform: translateY(-5px);
+    }
+
+    100% {
+        -webkit-transform: translateY(-10px);
+        transform: translateY(-10px);
+    }
+}
+.element {
+    z-index: 1;
+}
+.cloud {
+    z-index: 6;
+}
+#cloud1{top: -106px;left: -12%;}
+#cloud2{top: -127px;left: 17%;z-index: 0;}
+#cloud3{top: -81px;left: 46%;}
+#cloud4{top: -152px;left: 75%;}
+#cloud5{top: -171px;left: 5%;}
+#cloud6{top: -50px;left: 28%;}
+#cloud7{top: -110px;left: 50%;}
+#cloud8{top: -22px;left: 90%;}
+#cloud9{top: -177px;left: 34%;}
+#cloud10{top: -116px;left: 59%;}
+#cloud11{top: 66px;left: -8%;}
+#cloud12{top: -83px;left: 25%;}
+#cloud13{top: -110px;left: -13%;}
+#cloud14{top: -83px;left: 77%;}
+#cloud15{top: -110px;left: 50%;}
+#mountain16{bottom: 0%;left: 0;}
+#mountain17{bottom: -16%;left: 61%;}
+#mountain18{bottom: -18%;left: 52%;}
+#mountain19{bottom: -5%;}
+#mountain20{bottom: 0%}
+#mountain21{bottom: 0%}
+#mountain22{bottom: 0%}
+#mountain23{bottom: 0%}
+#mountain24{bottom: 0%}
+#mountain25{bottom: 0%}
+#mountain26{bottom: 0%}
+#mountain27{bottom: 0%}
+#mountain28{bottom: 0%}
+#mountain29{bottom: 0%}
+#mountain30{bottom: 0%}
+#mountain31{bottom: 0%}
+#mountain32{bottom: 0%}
+#mountain33{bottom: 0%}
+#mountain34{bottom: 0%}
+#mountain35{bottom: 0%}
+#mountain36{bottom: 0%}
+#mountain37{bottom: 0%}
+#mountain38{bottom: 0%}
+#mountain39{bottom: 0%}
+#mountain40{bottom: 0%}
+#mountain41{bottom: 0%}
+#mountain42{bottom: 0%}
+#mountain43{bottom: 0%}
+#mountain44{bottom: 0%}
+#mountain45{bottom: 0%}
+#mountain46{bottom: 0%}
+#mountain47{bottom: 0%}
+#mountain48{bottom: 0%}
+#mountain49{bottom: 0%}
+#mountain50{bottom: 0%}
+#mountain51{bottom: 0%}
+#mountain52{bottom: 0%}
+#mountain53{bottom: 0%}
+#mountain54{bottom: 0%}
+#mountain55{bottom: 0%}
+#mountain56{bottom: 0%}
+#mountain57{bottom: 0%}
+#mountain58{bottom: 0%}
+#mountain59{bottom: 0%}
+#mountain60{bottom: 0%}
+#mountain61{bottom: 0%}
+#mountain62{bottom: 0%}
+#mountain63{bottom: 0%}
+#mountain64{bottom: 0%}
+#mountain65{bottom: 0%}
+#mountain66{bottom: 0%}
+#mountain67{bottom: 0%}
+#mountain68{bottom: 0%}
+#mountain69{bottom: 0%}
+#mountain70{bottom: 0%}
+#mountain71{bottom: 0%}
+#mountain72{bottom: 0%}
+#mountain73{bottom: 0%}
+#mountain74{bottom: 0%}
+#mountain75{bottom: 0%}
+#mountain76{bottom: 0%}
+#mountain77{bottom: 0%}
+#mountain78{bottom: 0%}
+#mountain79{bottom: 0%}
+#mountain80{bottom: 0%}
+#mountain81{bottom: 0%}
+#mountain82{bottom: 0%}
+#mountain83{bottom: 0%}
+#mountain84{bottom: 0%}
+#mountain85{bottom: 0%}
+#mountain86{bottom: 0%}
+#mountain87{bottom: 0%}
+#mountain88{bottom: 0%}
+#mountain89{bottom: 0%}
+#mountain90{bottom: 0%}
+#mountain91{bottom: 0%}
+#mountain92{bottom: 0%}
+#mountain93{bottom: 0%}
+#mountain94{bottom: 0%}
+#mountain95{bottom: 0%}
+#mountain96{bottom: 0%}
+#mountain97{bottom: 0%}
+#mountain98{bottom: 0%}
+#mountain99{bottom: 0%}
+
+.size1 {
+    width: 5%;
+    left: 0;
+}
+.size2 {
+    width: 400px;
+    left: 25%;
+}
+.size3 {
+    width: 560px;
+    left: 50%;
+}
+.size4 {
+    width: 650px;
+    left: 75%;
+}
+#scene > li:nth-child(0){
+    z-index: 0;
+}
+#scene > li:nth-child(1){
+    z-index: 1;
+}
+#scene > li:nth-child(2){
+    z-index: 2;
+}
+#scene > li:nth-child(3){
+    z-index: 3;
+}
+#scene > li:nth-child(4){
+    z-index: 4;
+}
+#scene > li:nth-child(5){
+    z-index: 5;
+}
+#scene > li:nth-child(6){
+    z-index: 6;
+}
+#scene > li:nth-child(7){
+    z-index: 7;
+}
+#scene > li:nth-child(8){
+    z-index: 8;
+}
+#scene > li:nth-child(9){
+    z-index: 9;
+} 

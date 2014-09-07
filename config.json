@@ -1,0 +1,13 @@
+{
+	"title": "Comedian Seth Tippetts",
+	"host": "sethtippetts.com",
+	"analytics": "UA-42233857-1",
+	"aliases": ["sethyt.co","sethyt.com","tallseth.com","sethtippetts.me"],
+	"smtpTransport": {
+	    "service": "Gmail",
+	    "auth": {
+	        "user": "sethtippetts@gmail.com",
+	        "pass": "dhkbwqgphoshzptf"
+	    }
+	}
+}

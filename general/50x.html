@@ -1,0 +1,144 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"> 
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="description" content="Retailer of home furniture, electronics, appliances, mattresses and flooring with stores in Utah, Idaho, Nevada and California.">
+        <meta name="keywords" content="retailer,furniture,electronics,appliances,mattress,flooring,furnishings">
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width, user-scalable=0">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="robots" content="noindex">
+        <title>Comedian Seth Tippetts</title>
+        <script>
+            var isProduction = 'production' === 'production',
+                popupMessage = '',
+                mobileMode = !1,
+                loggedIn = !1,
+                analytics = 'UA-42233857-1';
+        </script>
+        <!--[if lte IE 8]><script>unsupported = true;</script><![endif]-->
+        <link href="//static.sethtippetts.com/css/style.css" rel="stylesheet" type="text/css" id="styles-css">
+        <link rel="apple-touch-icon" href="//static.sethtippetts.com/img/mobile/icon.png">
+        <link rel="shortcut icon" href="//static.sethtippetts.com/favicon.ico" type="image/x-icon">
+        <link rel="image_src" href="//static.sethtippetts.com/img/template/logo.jpg">
+        <script src="//static.sethtippetts.com/js/critical.js" id="critical-js"></script>
+    </head>
+    <body>
+        <noscript><div class="error box" style="font-size: 1.5em;"><mark>Warning!</mark> Please enable JavaScript. Our site will not display information or function properly without it.</div></noscript>
+        <!--[if lt IE 9]><div class="error box"><mark>Error!</mark> Sorry, your internet browser is no longer supported. Pages will not display properly and functions will be unavailable. <a href="/Unsupported.jsp" target="_blank">Upgrade for free now!</a></div><![endif]-->
+<header id="header">
+	<a href="/" id="logo"><img src="/img/logo.png"></a>
+</header>
+<div id="bodyContent">
+<h1>Page Not Found</h1>
+<h2>404</h2>
+<pre>Error: Page Not Found
+    at /www/app.js:125:16
+    at Function.app.render (/www/node_modules/express/lib/application.js:494:14)
+    at ServerResponse.res.render (/www/node_modules/express/lib/response.js:802:7)
+    at ServerResponse.res.render (/www/app.js:104:17)
+    at Layer.handle (/www/app.js:118:6)
+    at trim_prefix (/www/node_modules/express/lib/router/index.js:240:15)
+    at /www/node_modules/express/lib/router/index.js:208:9
+    at Function.proto.process_params (/www/node_modules/express/lib/router/index.js:269:12)
+    at next (/www/node_modules/express/lib/router/index.js:199:19)
+    at next (/www/node_modules/express/lib/router/index.js:176:38)</pre>
+
+</div>
+<div id="wrapper">
+    <ul id="scene">
+        <li class="layer" data-depth="0.10">
+            <img src="/img/cloud-w-shadow.png" class="cloud size4" id="cloud1">
+            <img src="/img/cloud-w-shadow.png" class="cloud size4" id="cloud2">
+            <img src="/img/cloud-w-shadow.png" class="cloud size4" id="cloud3">
+            <img src="/img/cloud-w-shadow.png" class="cloud size4" id="cloud4">
+            <img src="/img/mountain.svg" class="size4" id="mountain17">
+        </li>
+        <li class="layer element" data-depth="0.3" style="z-index: 2;">
+            <img src="/img/big-seth2.png" id="bigSeth">
+        </li>
+        <li class="layer" data-depth="0.25">
+            <img src="/img/cloud-w-shadow.png" class="cloud size3" id="cloud5">
+            <img src="/img/cloud-w-shadow.png" class="cloud size3" id="cloud6">
+            <img src="/img/cloud-w-shadow.png" class="cloud size3" id="cloud7">
+            <img src="/img/cloud-w-shadow.png" class="cloud size3" id="cloud8">
+            <img src="/img/cloud-w-shadow.png" class="cloud size3" id="cloud9">
+            <img src="/img/cloud-w-shadow.png" class="cloud size3" id="cloud10">
+        </li>
+        <li class="layer" data-depth="0.40">
+            <img src="/img/cloud-w-shadow.png" class="cloud size2" id="cloud11">
+            <img src="/img/cloud-w-shadow.png" class="cloud size2" id="cloud12">
+            <img src="/img/cloud-w-shadow.png" class="cloud size2" id="cloud13">
+            <img src="/img/cloud-w-shadow.png" class="cloud size2" id="cloud14">
+            <img src="/img/cloud-w-shadow.png" class="cloud size2" id="cloud15">
+            <img src="/img/mountain.svg" class="size4" id="mountain16">
+            <img src="/img/mountain.svg" class="size3" id="mountain18">
+            <img src="/img/mountain.svg" class="size4" id="mountain19">
+        </li>
+
+        <li class="layer" data-depth="1">
+            <img src="/img/mountain.svg" style="bottom:-10%; left: -10%;">
+        </li>
+    </ul>
+</div>
+<script src="/js/parallax.js"></script>
+<script>
+    $(function(){
+
+        var ratio = 427/344;
+        var winHeight = $(window).height();
+        var winWidth = $(window).width();
+        createLayer(50,0.5);
+//                createLayer(25,0.50);
+//                createLayer(25,1.00);
+        function createLayer(count,depth){
+            var cloudHeight = winHeight/6;
+            var cloudWidth = winWidth+200;
+            var $layer = $('<li class="layer" data-depth="'+depth+'" style="z-index: 4;"></li>');
+            var width,height,top,left,opts,$image,offset = winWidth/1.5;
+            for(var i = 20;i<count;++i){
+                width = Math.floor(Math.max(100,Math.random()*427));
+                height = Math.floor(Math.max(100,Math.random()*344))
+                top = Math.max(-100,(Math.random()*cloudHeight)-(cloudHeight/1.5));
+                left = Math.max(-100,(Math.random()*cloudWidth)-(cloudWidth/1.5));
+                if(top>left){
+                    top -= left/1.2;
+                }
+                else {
+                    left -= top/1.2;
+                }
+                opts = {
+                    width:width,
+                    height:height,
+                    bottom:Math.floor((Math.random()*cloudHeight)-100)+'px',
+                    left:Math.floor((Math.random()*cloudWidth)-100)+'px'
+                }
+//                        opts[count%2===0?'left':'right'] = left+'px';
+                $image = $('<img src="/img/mountain.svg" class="size4" id="mountain'+i+'">')//.css(opts);
+
+//                        $layer.append($image);
+            }
+            $('#scene').append($layer);
+
+        }
+        $('.cloud').each(function(i,val){
+
+            console.log('set timeout',Math.floor(i*Math.random()*1000));
+            var $this = $(this);
+            setTimeout(function(){
+                console.log('timeout');
+                $this.addClass('hover'+((i%3)+1));
+            },Math.floor(i*Math.random()*500))
+        });
+        $('#scene').height(winHeight);
+
+        $(window).resize(function(){
+            $('#scene').height(winHeight);
+        });
+        $('#scene').parallax();
+    });
+</script>    </body>
+</html>
