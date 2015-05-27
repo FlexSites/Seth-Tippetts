@@ -12,26 +12,26 @@ $verticalBlock: 34px;
 $headerHeight: 118px;
 
 //Base imports. Must be ordered correctly.
-@import "partials/helper";
-@import "partials/color";
-@import "partials/grid";
-@import "partials/base";
-@import "partials/icon";
-@import "partials/typography"; 
-@import "partials/backgroundColor";
+// @import "/www/global/scss/core/helper";
+// @import "partials/color";
+// @import "partials/grid";
+// @import "partials/base";
+// @import "partials/icon";
+// @import "partials/typography";
+// @import "partials/backgroundColor";
 
 //Element partials. Order doesn't matter.
-@import "partials/product";
-@import "partials/table";
-@import "partials/sidebar";
-@import "partials/button";
-@import "partials/tab";
-@import "partials/box";
-@import "partials/list";
-@import "partials/misc";
-@import "partials/shame";
-@import "partials/form";
-@import "partials/print";
+// @import "partials/product";
+// @import "partials/table";
+// @import "partials/sidebar";
+// @import "partials/button";
+// @import "partials/tab";
+// @import "partials/box";
+// @import "partials/list";
+// @import "partials/misc";
+// @import "partials/shame";
+// @import "partials/form";
+// @import "partials/print";
 
 //Specific template
 @import "template";
