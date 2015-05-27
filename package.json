@@ -1,0 +1,22 @@
+{
+  "name": "seth-tippetts",
+  "version": "0.0.0",
+  "description": "Official website for comedian Seth Tippetts",
+  "main": "public/index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FlexSites/Seth-Tippetts.git"
+  },
+  "author": "Seth Tippetts <sethtippetts@gmail.com> (http://sethtippetts.com)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FlexSites/Seth-Tippetts/issues"
+  },
+  "homepage": "https://github.com/FlexSites/Seth-Tippetts#readme",
+  "dependencies": {
+    "gulp": "^3.8.11"
+  }
+}
