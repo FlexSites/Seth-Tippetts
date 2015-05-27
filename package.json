@@ -1,6 +1,6 @@
 {
   "name": "seth-tippetts",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Official website for comedian Seth Tippetts",
   "main": "public/index.html",
   "scripts": {
